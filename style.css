@@ -1,4 +1,4 @@
-/* =================== GLOBAL RESET =================== */
+/* ========== GLOBAL RESET ========== */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* =================== NAVBAR =================== */
+/* ========== NAVBAR ========== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -28,7 +28,7 @@ body {
 
 .logo-text {
   font-weight: 900;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -48,7 +48,7 @@ body {
   transition: 0.3s;
 }
 
-/* Hover underline effect */
+/* Hover underline */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -64,7 +64,7 @@ body {
   width: 100%;
 }
 
-/* Contact Button in navbar */
+/* Contact Button */
 .btn-contact {
   background: #fff;
   color: #000 !important;
@@ -93,7 +93,7 @@ body {
   cursor: pointer;
 }
 
-/* =================== HERO SECTION =================== */
+/* ========== HERO SECTION ========== */
 .hero {
   background: #111;
   color: #fff;
@@ -153,7 +153,7 @@ body {
   color: #000;
 }
 
-/* =================== SERVICES =================== */
+/* ========== SERVICES ========== */
 .services {
   padding: 4rem 2rem;
   background: #f7f7f7;
@@ -190,7 +190,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* =================== PROJECTS =================== */
+/* ========== PROJECTS ========== */
 .projects {
   padding: 4rem 2rem;
   background: #fff;
@@ -199,13 +199,19 @@ body {
 
 .projects h2 {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   font-weight: 700;
+}
+
+.projects p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #555;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
@@ -217,17 +223,41 @@ body {
   transition: 0.3s;
 }
 
-.project-card img {
-  width: 100%;
-  display: block;
-}
-
 .project-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* =================== ABOUT =================== */
+.project-image {
+  width: 100%;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Individual project images */
+.img1 { background-image: url("images/img1.png"); }
+.img2 { background-image: url("images/img2.png"); }
+.img3 { background-image: url("images/img3.png"); }
+
+.project-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.8rem 0 0.4rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #444;
+  padding: 0 1rem 1rem;
+}
+
+/* ========== ABOUT ========== */
 .about {
   background: #111;
   color: #fff;
@@ -253,7 +283,7 @@ body {
   line-height: 1.8;
 }
 
-/* =================== CONTACT =================== */
+/* ========== CONTACT ========== */
 .contact {
   padding: 4rem 2rem;
   background: #f7f7f7;
@@ -297,7 +327,7 @@ body {
   background: #333;
 }
 
-/* =================== FOOTER =================== */
+/* ========== FOOTER ========== */
 .footer {
   background: #000;
   color: #fff;
@@ -306,7 +336,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* =================== SCROLL REVEAL =================== */
+/* ========== SCROLL ANIMATION ========== */
 .hidden {
   opacity: 0;
   transform: translateY(40px);
@@ -318,7 +348,7 @@ body {
   transform: translateY(0);
 }
 
-/* =================== RESPONSIVE =================== */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -349,17 +379,5 @@ body {
 
   .btn-contact {
     margin-top: 0.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-text {
-    font-size: 1.2rem;
-  }
-  .hero {
-    padding: 4rem 1.5rem;
-  }
-  .services, .projects, .about, .contact {
-    padding: 3rem 1.5rem;
   }
 }
