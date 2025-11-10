@@ -35,91 +35,59 @@
   <section class="services" id="services">
     <h2>Our Services</h2>
     <div class="service-cards">
-      <div class="card">
-        <h3>Tesla Charger Installation</h3>
-        <p>Certified installation of Tesla Wall Connectors with optimal wiring and load management.</p>
-      </div>
-      <div class="card">
-        <h3>All EV Charger Installations</h3>
-        <p>Home and commercial EV charger setup for all vehicle brands — fast, safe, and efficient.</p>
-      </div>
-      <div class="card">
-        <h3>Hot Tub Electrical</h3>
-        <p>Safe, code-compliant 240V wiring and breaker installations for hot tubs and spas.</p>
-      </div>
-      <div class="card">
-        <h3>Panel Upgrades</h3>
-        <p>Upgrade outdated panels to handle modern power needs and EV charging loads.</p>
-      </div>
+      <div class="card"><h3>Tesla Charger Installation</h3><p>Certified installation of Tesla Wall Connectors.</p></div>
+      <div class="card"><h3>All EV Charger Installations</h3><p>Setup for all EV brands — safe and efficient.</p></div>
+      <div class="card"><h3>Hot Tub Electrical</h3><p>Code-compliant 240 V wiring for spas and tubs.</p></div>
+      <div class="card"><h3>Panel Upgrades</h3><p>Increase load capacity safely and efficiently.</p></div>
     </div>
   </section>
 
   <!-- ===== PROJECTS ===== -->
   <section class="projects" id="projects">
     <h2>Recent Installations</h2>
-    <p>Here are a few of our recent projects — Tesla charger installations, EV setups, and panel upgrades.</p>
+    <p>Some of our recent EV charger and panel projects.</p>
 
     <div class="project-grid">
       <div class="project-card">
-        <div class="project-image">
-          <img src="images/img1.png" alt="Tesla Charger Installation" />
-        </div>
+        <div class="project-image"><img src="images/img1.png" alt="Tesla Charger Installation" /></div>
         <h3>Tesla Charger Installation</h3>
-        <p>Professional home charger setup with neat conduit routing and inspection-ready finish.</p>
       </div>
-
       <div class="project-card">
-        <div class="project-image">
-          <img src="images/img2.png" alt="EV Charger Setup" />
-        </div>
-        <h3>EV Charger - Multi Vehicle Setup</h3>
-        <p>Installed dual 240V chargers supporting all EV types with weather-proof enclosures.</p>
+        <div class="project-image"><img src="images/img2.png" alt="EV Charger Setup" /></div>
+        <h3>EV Charger Setup</h3>
       </div>
-
       <div class="project-card">
-        <div class="project-image">
-          <img src="images/img3.png" alt="Panel Upgrade" />
-        </div>
-        <h3>Panel Upgrade Project</h3>
-        <p>Upgraded main electrical panel for increased load, ensuring safe and efficient operation.</p>
-      </div>
-
-            <div class="project-card">
-        <div class="project-image">
-          <img src="images/img2.png" alt="EV Charger Setup" />
-        </div>
-        <h3>EV Charger - Multi Vehicle Setup</h3>
-        <p>Installed dual 240V chargers supporting all EV types with weather-proof enclosures.</p>
+        <div class="project-image"><img src="images/img3.png" alt="Panel Upgrade" /></div>
+        <h3>Panel Upgrade</h3>
       </div>
     </div>
-    
   </section>
 
   <!-- ===== ABOUT ===== -->
   <section class="about" id="about">
     <h2>About Ensure Electric</h2>
-    <p>We are licensed electricians providing dependable electrical services in Ontario.  
-    From EV chargers to home rewiring, we ensure every project meets safety and performance standards.</p>
-    <ul>
-      <li>✔ Licensed & Insured Electrical Contractors</li>
-      <li>✔ Specializing in EV Infrastructure</li>
-      <li>✔ Transparent Pricing & On-Time Delivery</li>
-    </ul>
+    <p>Licensed electricians serving Ontario — from EV chargers to complete rewiring, with focus on safety and quality.</p>
   </section>
 
   <!-- ===== CONTACT ===== -->
   <section class="contact" id="contact">
     <h2>Get a Quote</h2>
-    <p>Let’s talk about your project — tell us what you need below.</p>
-
     <form class="contact-form">
       <input type="text" placeholder="Full Name" required />
       <input type="email" placeholder="Email Address" required />
       <input type="tel" placeholder="Phone Number" required />
-      <textarea placeholder="Describe your project (e.g. Tesla charger, hot tub, panel upgrade)" required></textarea>
+      <textarea placeholder="Describe your project" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
+
+  <!-- ===== LIGHTBOX POPUP ===== -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" id="closeBtn">✖</span>
+    <img class="lightbox-image" id="lightboxImage" src="" alt="Project Image" />
+    <button class="nav-btn prev" id="prevBtn">❮</button>
+    <button class="nav-btn next" id="nextBtn">❯</button>
+  </div>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
