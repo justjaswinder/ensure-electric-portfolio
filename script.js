@@ -70,3 +70,23 @@ prevBtn.addEventListener("click",()=>{
 lightbox.addEventListener("click",e=>{
   if(e.target===lightbox)lightbox.style.display="none";
 });
+// Scroll-triggered animation for Why Choose Us section
+const whyItems = document.querySelectorAll(".why-choose-us li");
+
+function animateWhyChooseUs() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  whyItems.forEach((item, index) => {
+    const top = item.getBoundingClientRect().top;
+    if (top < triggerBottom) {
+      setTimeout(() => {
+        item.classList.add("show");
+      }, index * 200); // stagger each item by 200ms
+    }
+  });
+}
+
+// Run on scroll & on load
+window.addEventListener("scroll", animateWhyChooseUs);
+window.addEventListener("load", animateWhyChooseUs);
+
