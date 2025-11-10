@@ -15,21 +15,6 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#111;background:#fff
 
 /* ---- WHY CHOOSE US ---- */
 .why-choose-us {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 4rem 2rem;
-}
-.why-choose-us li {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s forwards;
-}
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-/* ---- WHY CHOOSE US ---- */
-.why-choose-us {
   background: linear-gradient(180deg, #000 0%, #1b1b1b 100%);
   color: #fff;
   text-align: center;
@@ -56,77 +41,41 @@ body{font-family:'Poppins',sans-serif;line-height:1.6;color:#111;background:#fff
   background: #1b1b1b;
   margin: 0.8rem 0;
   padding: 1rem 1.2rem;
-  border-left: 4px solid #f9d423;
+  border-left: 4px solid #f9d423; /* electric yellow accent */
   border-radius: 8px;
   font-weight: 500;
   line-height: 1.5;
   display: flex;
   align-items: center;
   gap: 10px;
+
   opacity: 0;
   transform: translateX(-30px);
-  animation: fadeSlide 0.8s ease forwards;
+  transition: all 0.6s ease; /* smooth slide-in */
 }
 
-.why-choose-us li:nth-child(1) { animation-delay: 0.2s; }
-.why-choose-us li:nth-child(2) { animation-delay: 0.4s; }
-.why-choose-us li:nth-child(3) { animation-delay: 0.6s; }
-.why-choose-us li:nth-child(4) { animation-delay: 0.8s; }
-.why-choose-us li:nth-child(5) { animation-delay: 1s; }
-
-@keyframes fadeSlide {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Check icon animation */
-.check {
+.why-choose-us li .check {
   color: #f9d423;
   font-size: 1.3rem;
   transform: scale(0);
-  animation: pop 0.4s ease forwards;
-  animation-delay: inherit;
+  transition: transform 0.4s ease;
 }
 
-@keyframes pop {
-  to {
-    transform: scale(1);
-  }
+/* Show class triggered by scroll */
+.why-choose-us li.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-
-.why-choose-us h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.why-choose-us li.show .check {
+  transform: scale(1);
 }
 
-.why-choose-us ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 600px;
-  text-align: left;
-}
-
-.why-choose-us li {
-  background: #1b1b1b;
-  margin: 0.6rem 0;
-  padding: 1rem 1.2rem;
-  border-left: 4px solid #f9d423; /* electric yellow accent */
-  border-radius: 6px;
-  font-weight: 500;
-  line-height: 1.5;
-  transition: background 0.3s ease;
-}
-
+/* Hover effect for cards */
 .why-choose-us li:hover {
   background: #222;
 }
+
 
 
 /* ---- HERO ---- */
