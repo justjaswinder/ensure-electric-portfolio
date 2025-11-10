@@ -1,30 +1,36 @@
-/* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
   color: #111;
   background: #fff;
   scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
-/* Navbar */
+/* ========== NAVBAR ========== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
   background: #000;
   color: #fff;
+  position: sticky;
+  top: 0;
   z-index: 100;
 }
 
 .logo-text {
-  font-weight: 800;
-  font-size: 1.4rem;
+  font-weight: 900;
+  font-size: 1.6rem;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .nav-links {
@@ -37,22 +43,46 @@ body {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
+  position: relative;
+  padding-bottom: 2px;
   transition: 0.3s;
 }
 
-.nav-links a:hover { color: #ddd; }
+.nav-links a:hover {
+  color: #ddd;
+}
 
+/* Hover underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Contact Button */
 .btn-contact {
   background: #fff;
   color: #000;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-weight: 600;
+  transition: 0.3s;
 }
 
-.btn-contact:hover { background: #ddd; }
+.btn-contact:hover {
+  background: #ddd;
+}
 
-/* Mobile nav toggle */
+/* Mobile Menu Button */
 .menu-toggle {
   display: none;
   background: none;
@@ -62,7 +92,7 @@ body {
   cursor: pointer;
 }
 
-/* Hero */
+/* ========== HERO SECTION ========== */
 .hero {
   background: #111;
   color: #fff;
@@ -71,8 +101,8 @@ body {
 }
 
 .hero h1 {
-  font-size: 2.6rem;
-  font-weight: 800;
+  font-size: 2.8rem;
+  font-weight: 900;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
@@ -83,7 +113,7 @@ body {
 }
 
 .hero p {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto 2rem;
   color: #ccc;
 }
@@ -94,8 +124,9 @@ body {
   gap: 1rem;
 }
 
-.btn-dark, .btn-outline {
-  padding: 0.8rem 1.5rem;
+.btn-dark,
+.btn-outline {
+  padding: 0.9rem 1.7rem;
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
@@ -121,11 +152,11 @@ body {
   color: #000;
 }
 
-/* Services */
+/* ========== SERVICES ========== */
 .services {
   padding: 4rem 2rem;
-  text-align: center;
   background: #f7f7f7;
+  text-align: center;
 }
 
 .services h2 {
@@ -153,11 +184,22 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Projects */
+.card h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* ========== PROJECTS ========== */
 .projects {
   padding: 4rem 2rem;
-  text-align: center;
   background: #fff;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
 }
 
 .project-grid {
@@ -170,6 +212,8 @@ body {
   border: 1px solid #eee;
   border-radius: 10px;
   overflow: hidden;
+  background: #fff;
+  transition: 0.3s;
 }
 
 .project-card img {
@@ -177,25 +221,49 @@ body {
   display: block;
 }
 
-/* About */
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ========== ABOUT ========== */
 .about {
   background: #111;
   color: #fff;
-  padding: 4rem 2rem;
   text-align: center;
+  padding: 4rem 2rem;
 }
 
-.about h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
-.about ul { list-style: none; margin-top: 1rem; color: #ccc; }
+.about h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 
-/* Contact */
+.about p {
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+  color: #ccc;
+}
+
+.about ul {
+  list-style: none;
+  color: #aaa;
+  line-height: 1.8;
+}
+
+/* ========== CONTACT ========== */
 .contact {
   padding: 4rem 2rem;
-  text-align: center;
   background: #f7f7f7;
+  text-align: center;
 }
 
-.contact h2 { font-size: 2rem; margin-bottom: 1rem; }
+.contact h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 
 .contact-form {
   max-width: 500px;
@@ -221,11 +289,14 @@ body {
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.contact-form button:hover { background: #333; }
+.contact-form button:hover {
+  background: #333;
+}
 
-/* Footer */
+/* ========== FOOTER ========== */
 .footer {
   background: #000;
   color: #fff;
@@ -234,7 +305,19 @@ body {
   font-size: 0.9rem;
 }
 
-/* Responsive nav */
+/* ========== SCROLL REVEAL EFFECT ========== */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -253,5 +336,29 @@ body {
 
   .menu-toggle {
     display: block;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn-contact {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+  .services, .projects, .about, .contact {
+    padding: 3rem 1.5rem;
   }
 }
