@@ -89,4 +89,20 @@ function animateWhyChooseUs() {
 // Run on scroll & on load
 window.addEventListener("scroll", animateWhyChooseUs);
 window.addEventListener("load", animateWhyChooseUs);
+// Scroll reveal for Projects
+const projectCards = document.querySelectorAll(".project-card");
+
+function revealProjects() {
+  const triggerBottom = window.innerHeight * 0.85;
+  projectCards.forEach((card) => {
+    const top = card.getBoundingClientRect().top;
+    if (top < triggerBottom) {
+      card.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealProjects);
+window.addEventListener("load", revealProjects);
+
 
